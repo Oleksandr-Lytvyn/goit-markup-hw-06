@@ -775,6 +775,7 @@ body {
   border-radius: 4px;
   outline: none;
   transition: border-color 250ms var(--cubic);
+  cursor: pointer;
 }
 
 .modal-item input:focus {
@@ -783,30 +784,6 @@ body {
 
 .modal-item input:focus + svg {
   fill: var(--accent-color);
-}
-
-.privacy-label {
-  transition: color 250ms var(--cubic);
-}
-
-.checkbox-custom {
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--black-color);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.check-icon {
-  /* fill: transparent; */
-}
-
-.privacy-input:checked + .checkbox-custom {
-  background-color: var(--accent-color);
-  border: none;
-  fill: var(--black-color);
 }
 
 .modal-input-box {
@@ -832,6 +809,7 @@ body {
   resize: none;
   outline: none;
   transition: border-color 250ms var(--cubic);
+  cursor: pointer;
 }
 
 .modal-item textarea::placeholder {
@@ -845,21 +823,42 @@ body {
   border-color: var(--accent-color);
 }
 
-.privacy {
-  margin-bottom: 30px;
+/* -------------CHECKBOX-------------- */
+
+.check-box {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--black-color);
+  border-radius: 3px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--white-color);
+  transition: border-color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
-.privacy label {
-  font-size: 14px;
+.check-text {
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .privacy-link {
   color: var(--accent-color);
+  margin-left: 5px;
 }
 
+.checkin:checked + .check-text span {
+  background-color: #188ce8;
+  border-color: transparent;
+}
+
+/* -------------MODAL-BTN-------------- */
 .btn-modal-submit {
   cursor: pointer;
   height: 50px;
@@ -877,6 +876,13 @@ body {
   padding: 10px 32px;
   border-radius: 4px;
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms var(--cubic);
+}
+
+.btn-modal-submit:hover,
+.btn-modal-submit:focus {
+  background-color: #188ce8;
 }
 
 .btn-modal-close {
