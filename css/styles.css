@@ -574,7 +574,6 @@ body {
 .footer .container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .logo-footer {
@@ -651,26 +650,21 @@ body {
 }
 
 .footer-sign {
-  display: flex;
-  align-items: flex-end;
+  margin-left: auto;
 }
 
-.footer-sign-form label {
+.footer-sign-call {
   font-weight: 700;
-  line-height: 1.14;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
 }
 
-.footer-sign-form {
+.footer-sign-input {
   width: 358px;
-  margin-left: 93px;
-  margin-right: 12px;
-}
-
-.footer-sign-form input {
-  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -682,13 +676,13 @@ body {
   transition: border-color 250ms var(--cubic);
 }
 
-.footer-sign-form {
-  display: flex;
-  flex-direction: column;
+.footer-sign-input:focus,
+.footer-sign-input:hover {
+  border-color: var(--accent-color);
 }
 
-.footer-sign-form input:focus {
-  border-color: var(--accent-color);
+.footer-sign form {
+  display: flex;
 }
 
 .btn-sign {
@@ -703,10 +697,24 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
-  margin: 0 auto;
-  padding: 10px 32px;
+  margin-left: 12px;
+  padding: 10px 29px;
   border-radius: 4px;
   border: none;
+
+  display: flex;
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.btn-sign-icon {
+  margin-left: 10px;
+  fill: var(--white-color);
+}
+
+.btn-sign:hover,
+.btn-sign:focus {
+  background-color: #188ce8;
 }
 
 /* -------------MODAL, BACKDROP-------------- */
@@ -785,11 +793,13 @@ body {
   cursor: pointer;
 }
 
-.modal-item input:focus {
+.modal-item input:focus,
+.modal-item input:hover {
   border-color: var(--accent-color);
 }
 
-.modal-item input:focus + svg {
+.modal-item input:focus + svg,
+.modal-item input:hover + svg {
   fill: var(--accent-color);
 }
 
@@ -825,7 +835,8 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-item textarea:focus {
+.modal-item textarea:focus,
+.modal-item textarea:hover {
   border-color: var(--accent-color);
 }
 
