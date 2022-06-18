@@ -709,6 +709,8 @@ body {
   border: none;
 }
 
+/* -------------MODAL, BACKDROP-------------- */
+
 .backdrop {
   width: 100%;
   height: 100%;
@@ -756,6 +758,11 @@ body {
 .modal-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal-item:nth-child(5) {
+  margin-bottom: 20px;
 }
 
 .modal-item label {
@@ -788,7 +795,6 @@ body {
 
 .modal-input-box {
   position: relative;
-  margin-bottom: 10px;
 }
 
 .modal-icon {
@@ -823,6 +829,10 @@ body {
   border-color: var(--accent-color);
 }
 
+.privacy {
+  margin-bottom: 30px;
+}
+
 /* -------------CHECKBOX-------------- */
 
 .check-box {
@@ -845,7 +855,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 .privacy-link {
@@ -861,7 +870,6 @@ body {
 /* -------------MODAL-BTN-------------- */
 .btn-modal-submit {
   cursor: pointer;
-  height: 50px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -873,7 +881,7 @@ body {
   background-color: var(--accent-color);
   display: block;
   margin: 0 auto;
-  padding: 10px 32px;
+  padding: 10px 55px;
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -900,4 +908,11 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  transition: fill 250ms var(--cubic);
+}
+
+.btn-modal-close:hover,
+.btn-modal-close:focus {
+  fill: var(--accent-color);
 }
